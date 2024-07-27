@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    perspective: 600px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.title-line {
+    text-align: center;
+    padding-top: 50px;
+    font: 27px "Roboto", sans-serif;
+}
+
+.title-line .line {
+    background-color: gray;
+    width: 100px;
+    height: 4px;
+    display: block;
+    margin: 0 auto 70px auto;
+    transition: width .5s;
+    border-radius: 25px;
+}
+
+.title-line:hover .line {
+    width: 150px;
+}
+
+/* HEADER............................................................................................... */
+.container-header {
+    width: 100%;
+    margin: auto;
+}
+
+.info-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(22, 22, 23, 1);
+    padding: 10px 0;
+}
+
+.list {
+    list-style: none;
+}
+
+.info-header nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+    text-transform: capitalize;
+    font: normal 16px "Roboto", sans-serif;
+}
+
+.info-header nav ul li .item-page {
+    position: relative;
+    color: #E8E8ED;
+    padding: 10px 19px;
+    text-decoration: none;
+}
+
+.info-header .search-login i {
+    color: #E8E8ED;
+    margin-left: 15px;
+}
+
+.info-header .search-login i span {
+    margin-left: 3px;
+    font: bold 25px "Roboto", sans-serif;
+}
+
+.info-header nav ul li .item-page::before,
+.info-header nav ul li .item-page::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    border: #E8E8ED solid;
+    transition: 0.2s;
+}
+
+.info-header nav ul li .item-page::before {
+    border-width: 0 2px;
+    width: 97%;
+    height: 95%;
+    transform: scale(1, 0);
+}
+
+.info-header nav ul li .item-page:hover::before {
+    transform: scale(1, 1);
+}
+
+.info-header nav ul li .item-page::after {
+    border-width: 2px 0;
+    width: 99%;
+    height: 90%;
+    transform: scale(0, 1);
+    transform-origin: left;
+}
+
+.info-header nav ul li .item-page:hover::after {
+    transform: scale(1, 1);
+    transition-delay: 0.2s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 600px;
+    padding: 15px 20px 15px 0;
+    margin-top: 10px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-menu {
+    transform: scale(1);
+}
+
+.dropdown-menu ul {
+    display: table-cell;
+    text-align: center;
+}
+
+.dropdown-menu ul li:first-child a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.dropdown-menu ul li .kl {
+    position: relative;
+    text-decoration: none;
+    padding: 10px 19px;
+    color: rgba(0, 0, 0, 255);
+    line-height: 2;
+}
+
+/* SECTION-ONE............................................................................................... */
+main {
+    background-color: rgba(0, 0, 0, 255);
+}
+
+.info-section-one .title {
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    font: bold 55px "Roboto", sans-serif;
+}
+
+.info-section-one .para-section-one {
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font: 30px "Roboto", sans-serif;
+}
+
+.info-section-one .but-section-one {
+    color: #fff;
+    background: rgb(32, 128, 224);
+    cursor: pointer;
+    padding: 11px 21px;
+    margin-left: 690px;
+    border: none;
+    border-radius: 20px;
+    font: bold 17px "Roboto", sans-serif;
+    text-transform: capitalize;
+}
+
+.info-section-one .but-section-one:hover {
+    background: #3793ef;
+}
+
+main figure {
+    margin-left: 260px;
+}
+
+/* SECTION-TWO............................................................................................... */
+
+.items {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+.items .desc .next {
+    color: rgba(22, 22, 23, 1);
+    border: none;
+    font-size: 27px;
+    margin-left: 107px;
+    opacity: 0;
+}
+
+.item:hover .next {
+    opacity: 1;
+}
+
+.title-item {
+    margin-top: 10px;
+}
+
+.info {
+    position: relative;
+    color: #E8E8ED;
+    background-color: #5a717f;
+    width: 49%;
+    height: 330px;
+    padding: 20px;
+    margin-top: 50px;
+    font-family: "Roboto", sans-serif;
+}
+
+.para-photo .info .semi-colum {
+    color: #ebddd1;
+    font-size: 45px;
+}
+
+.para-photo .info .text {
+    position: absolute;
+    font: bold 20px;
+}
+
+.para-photo .info .desc-para {
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.para-photo .info .info-para {
+    word-spacing: 1px;
+    line-height: 2;
+}
+
+.para-photo .info .up-line {
+    display: flex;
+    gap: 20px;
+    flex-direction: row-reverse;
+}
+
+.para-photo .info .up-line .line-info {
+    width: 50px;
+    margin-top: 20px;
+}
+
+.para-photo {
+    display: flex;
+}
+
+.item-imges {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-imges .item-imge {
+    width: 50%;
+    text-align: center;
+}
+
+.item-imges .item-imge .ipad-2024,
+.item-imges .item-imge .mac-2024 {
+    transition: 1s;
+}
+
+.ipad-2024:hover,
+.mac-2024:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.item-imges .item-imge .text-imge {
+    position: absolute;
+    margin: -46px 0 0 -45px;
+    font: bold 20px "Roboto", sans-serif;
+}
+
+.item-imges .item-imge .text-imge .num {
+    color: red;
+    font: bold 27px;
+}
+
+.item-imges .item-imge button {
+    position: absolute;
+    color: #E8E8ED;
+    background-color: #5a717f;
+    cursor: pointer;
+    margin: -20px 0 0 7px;
+    padding: 5px 5px;
+    font: bold 15px "Roboto", sans-serif;
+    text-transform: capitalize;
+    column-span: all;
+    border: none;
+    border-radius: 20px;
+}
+
+.all-icon {
+    display: flex;
+}
+
+.all-icon .icon-item {
+    border-right: 2px solid #5a717f;
+    margin: 55px 0;
+    text-align: center;
+    width: 20%;
+}
+
+.all-icon .icon-item .icon {
+    background-image: url(../images/service-icon.png);
+    height: 55px;
+    background-repeat: no-repeat;
+}
+
+.all-icon .icon-item .one {
+    background-position: center 5px;
+    transition: .5s;
+}
+
+.icon-item:hover .one {
+    background-position: center -85px;
+}
+
+.all-icon .icon-item .two {
+    background-position: center -180px;
+    transition: .5s;
+}
+
+.icon-item:hover .two {
+    background-position: center -270px;
+}
+
+.all-icon .icon-item .three {
+    background-position: center -360px;
+    transition: .5s;
+}
+
+.icon-item:hover .three {
+    background-position: center -450px;
+}
+
+.all-icon .icon-item .four {
+    background-position: center -540px;
+    transition: .5s;
+}
+
+.icon-item:hover .four {
+    background-position: center -635px;
+}
+
+.all-icon .icon-item .five {
+    border: 0;
+    background-position: center -725px;
+    transition: .5s;
+}
+
+.ii:last-child {
+    border: 0;
+}
+
+.icon-item:hover .five {
+    background-position: center -825px;
+}
+
+.all-icon .icon-item .info-icon h2 {
+    font-family: "Roboto", sans-serif;
+}
+
+.all-icon .icon-item .info-icon span {
+    font: 15px "Roboto", sans-serif;
+}
+
+.line-section-two {
+    margin-bottom: 20px;
+}
+
+/* END............................................................................................... */
+
+.info-phone {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.info-phone span {
+    font: 20px "Roboto", sans-serif;
+}
+
+.items-iphone {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+}
+
+.iph {
+    margin-bottom: 50px;
+}
+
+.up-front-back,
+.front,
+.back {
+    width: 340px;
+    height: 390px;
+}
+
+.up-front-back {
+    position: relative;
+    transition: .5s;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    position: absolute;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.up-front-back:hover {
+    transform: rotateY(180deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.front-iPho-15 {
+    background: url(../images/front-iPho-15.jpg);
+    background-size: cover;
+}
+
+.back-iPho-15 {
+    background: url(../images/back-iPho-15.jpg);
+    background-size: cover;
+}
+
+.front-iPho-15-pro {
+    background: url(../images/front-iPho-15-pro.jpg);
+    background-size: cover;
+}
+
+.back-iPho-15-pro {
+    background: url(../images/back-iPho-15-pro.jpeg);
+    background-size: cover;
+}
+
+.front-iPho-15-pro-max {
+    background: url(../images/front-iPho-15-pro-max.jpg);
+    background-size: cover;
+}
+
+.back-iPho-15-pro-max {
+    background: url(../images/back-iPho-15-pro-max.jpeg);
+    background-size: cover;
+}
+
+.item-iphone .name-phone {
+    font: 18px "Roboto", sans-serif;
+}
+
+.item-iphone .price {
+    font: bold 18px "Roboto", sans-serif;
+    line-height: 1.7;
+}
+
+.front-mac {
+    background: url(../images/front-mac.jpeg);
+    background-size: cover;
+}
+
+.back-mac {
+    background: url(../images/back-mac.jpeg);
+    background-size: cover;
+}
+
+.front-ipad {
+    background: url(../images/front-ipad.jpg);
+    background-size: cover;
+}
+
+.back-ipad {
+    background: url(../images/back-ipad.png);
+    background-size: cover;
+}
+
+.front-watch {
+    background: url(../images/front-watch.png);
+    background-size: cover;
+}
+
+.back-watch {
+    background: url(../images/back-watch.png);
+    background-size: cover;
+}
+
+.item-iphone .star {
+    color: #acacb0;
+    line-height: 3;
+}
+
+.up-front-back .social {
+    display: block;
+    font-size: 40px;
+    margin: 5px 0 0 2px;
+}
